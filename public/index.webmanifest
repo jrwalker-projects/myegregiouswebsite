@@ -1,0 +1,18 @@
+{
+  "name": "my.egregious.website",
+  "short_name": "my.egregious.website",
+  "lang": "en-us",
+  "theme_color": "#3f51b5",
+  "background_color": "#3f51b5",
+  "icons": [{
+    "src": "/images/icon_hua42834bdb1f7e874bc747a5cf5f43a55_563001_192x192_fill_lanczos_center_2.png",
+    "sizes": "192x192",
+    "type": "image/png"
+    }, {
+    "src": "/images/icon_hua42834bdb1f7e874bc747a5cf5f43a55_563001_512x512_fill_lanczos_center_2.png",
+    "sizes": "512x512",
+    "type": "image/png"
+     }],
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}
