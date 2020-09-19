@@ -1,49 +1,46 @@
 ---
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: I eat too much. Probably shouldn't have lead with that.
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
-email: ""
-interests:
-- Artificial Intelligence
-- Computational Linguistics
-- Information Retrieval
+  - course: BSCS
+    institution: Northwestern University
+    year: 1977
+email: "john@egregious.website"
 organizations:
-- name: Stanford University
-  url: https://www.stanford.edu/
-role: Professor of Artificial Intelligence
+- name: People's Resource Center Volunteer
+  url: http://www.peoplesrc.org/
+  role: Computer Trainer
+- name: Glen Ellyn Children's Resource Center Volunteer
+  url: https://www.gecrc.com/
+  role: Tutor
 social:
 - icon: envelope
   icon_pack: fas
   link: /#contact
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/GeorgeCushen
-- icon: graduation-cap
-  icon_pack: fas
-  link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
 - icon: github
   icon_pack: fab
-  link: https://github.com/gcushen
+  link: https://github.com/jrwalker-projects
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/
+  link: https://www.linkedin.com/in/programdelivery/
+- icon: twitter
+  icon_pack: fab
+  link: https://twitter.com/myegregiousweb1
+- icon: sitemap
+  icon_pack: fas
+  link: https://my.egregious.website
+- icon: flickr
+  icon_pack: fab
+  link: https://www.flickr.com/photos/whatcouldgowrong/albums
 superuser: true
-title: Nelson Bighetti
-user_groups:
-- Principal Investigators
+title: John Walker
 ---
 
-Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+John Walker is a data analyst, student and volunteer. In a previous life in banking technology, performed systems integration, development & delivery project management and program management office (PMO) roles.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+Based over the years in Paris, London, Tokyo and Chicago - delivered projects in 12 countries
 
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "media/demo_resume.pdf" "newtab" >}}resumé{{< /staticref >}}.
+Current activities:
+- Data Analysis & Visualization
+- Generative Images
+- Volunteer Tutoring
