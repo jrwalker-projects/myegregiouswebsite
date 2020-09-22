@@ -42,7 +42,7 @@ collections:
               - {label: "Solid", value: "fas"}
               - {label: "Regular", value: "far"}
               - {label: "Brand", value: "fab"}
-              - {label: "Academic", value: "ai"}
+              - {label: "Ai", value: "ai"}
           - {label: Icon (see https://sourcethemes.com/academic/docs/page-builder/#icons), name: icon, widget: string}
       - label: "Organizations you belong to or are affiliated with (shown in About widget)"
         name: "organizations"
@@ -175,7 +175,7 @@ collections:
               - {label: "Solid", value: "fas"}
               - {label: "Regular", value: "far"}
               - {label: "Brand", value: "fab"}
-              - {label: "Academic", value: "ai"}
+              - {label: "Ai", value: "ai"}
           - {label: "Icon (see https://sourcethemes.com/academic/docs/page-builder/#icons)", name: icon, widget: string, required: false}
       - label: "Featured Image"
         name: "image"
@@ -223,7 +223,7 @@ collections:
               - {label: "Solid", value: "fas"}
               - {label: "Regular", value: "far"}
               - {label: "Brand", value: "fab"}
-              - {label: "Academic", value: "ai"}
+              - {label: "Ai", value: "ai"}
           - {label: "Icon (see https://sourcethemes.com/academic/docs/page-builder/#icons)", name: icon, widget: string, required: false}
       - {label: "Event", name: "event", widget: "string"}
       - {label: "Event link", name: "event_url", widget: "string"}
