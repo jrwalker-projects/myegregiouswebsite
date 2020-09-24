@@ -3,7 +3,7 @@
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 20  # Order that this section will appear.
+weight = 60  # Order that this section will appear.
 
 title = "Image Gallery"
 subtitle = ""
@@ -13,9 +13,9 @@ subtitle = ""
 
 {{< figure library="true" src="travelmap.gif" title="" >}}
 
-{{< figure library="true" src="Istanbul.jpg" title="" >}}
+{{< figure library="true" src="Istanbul.jpg" title="Istanbul" >}}
 
-{{< figure library="true" src="Bangkok.jpg" title="" >}}
+{{< figure library="true" src="Bangkok.jpg" title="Bangkok" >}}
 
 {{< figure library="true" src="KL.jpg" title="" >}}
 

@@ -10,7 +10,7 @@ active: true
 headless: true
 
 # Order that this section appears on the page.
-weight: 120
+weight: 70
 
 title: Popular Topics
 subtitle:
@@ -18,7 +18,7 @@ subtitle:
 content:
   # Choose how many tags you would like to display (0 = all tags)
   count: 20
-  
+
   # Choose the taxonomy from `config.toml` to display (e.g. tags, categories)
   taxonomy: tags
 
