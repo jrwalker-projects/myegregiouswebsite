@@ -10,9 +10,9 @@ active: true
 headless: true
 
 # Order that this section appears on the page.
-weight: 70
+weight: 60
 
-title: Popular Topics
+title: Popular Topics and Tags
 subtitle:
 
 content:
