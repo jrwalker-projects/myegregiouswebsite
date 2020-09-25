@@ -12,33 +12,31 @@ headless: true
 # Order that this section appears on the page.
 weight: 15
 
-title:
+title: Demos
 subtitle:
 
 design:
   columns: "1"
   background:
-    image: grid_art200630noFill.jpeg
-    image_darken: 0.0
+    image: headers/bubbles-wide.jpg
+    image_darken: 0.6
     image_parallax: true
     image_position: center
     image_size: cover
-    text_color_light: false
+    text_color_light: true
   spacing:
     padding: ["20px", "0", "20px", "0"]
 ---
 
-{{< figure library="true" src="logo1.png" title="" >}}
+Welcome to the demo of the **resumé template** for Academic.
 
-{{% alert success %}}
-Welcome to my egregious website! Posts, some projects, images and information about me..
-{{% /alert %}}
+#[View more templates](https://sourcethemes.com/academic/templates/) for Academic.
 
-{{% alert warning %}}
-Warning: It's pretty egregious
-{{% /alert %}}
+#**Over 500,000 [Amazing Websites](https://sourcethemes.com/academic/) have Already Been Built with Academic**
+
+#**[Join](https://sourcethemes.com/academic/docs/install/) the Most Empowered Hugo Community**
 
 {{% alert note %}}
-Informational note: Best podcast ever [Perhaps It's You](https://perhapsitsyou.wordpress.com/) - an unofficial Unsolved Mysteries rewatch podcast (NSFW) available on every worthwhile audio platform
+This homepage section is an example of adding [elements](https://sourcethemes.com/academic/docs/writing-markdown-latex/) to the [*Blank* widget](https://sourcethemes.com/academic/docs/widgets/).
 
 {{% /alert %}}
