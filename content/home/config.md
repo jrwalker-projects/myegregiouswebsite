@@ -28,10 +28,9 @@ design:
     padding: ["20px", "0", "20px", "0"]
 ---
 
-<p>my.egregious.website is highly configurable using the options below.</p>
+<p>my.egregious.website is fully configurable using the options below.</p>
 
 <p>Choose the website quality level to best suit your needs:</p>
-
 <form action="/action_page.php">
   <input type="radio" id="Excellent" name="quality" value="Excellent">
   <label for="Excellent">Excellent</label><br>

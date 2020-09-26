@@ -13,7 +13,7 @@ headless: true
 weight: 130
 
 title: Contact
-subtitle:
+subtitle: Complete the form or email contact@egregious.website
 
 # Automatically link email and phone or display as text?
 autolink: true

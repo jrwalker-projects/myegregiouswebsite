@@ -24,6 +24,11 @@
   weight = 70
 
 [[main]]
+  name = "FAQ"
+  url = "#faq"
+  weight = 80
+
+[[main]]
   name = "Config"
   url = "#config"
   weight = 90
