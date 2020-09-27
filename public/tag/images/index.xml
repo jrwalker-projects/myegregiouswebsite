@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Images | my.egregious.website</title>
+    <link>/tag/images/</link>
+      <atom:link href="/tag/images/index.xml" rel="self" type="application/rss+xml" />
+    <description>Images</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 09 May 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png</url>
+      <title>Images</title>
+      <link>/tag/images/</link>
+    </image>
+    
+    <item>
+      <title>animated mandala app</title>
+      <link>/project/mandala-app/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <guid>/project/mandala-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>my travel map app</title>
+      <link>/project/travel-map-app/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/project/travel-map-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>color palette app</title>
+      <link>/project/image-palette-app/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>/project/image-palette-app/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

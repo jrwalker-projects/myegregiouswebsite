@@ -105,7 +105,7 @@ data.head()
 &lt;p&gt;Demo:&lt;/p&gt;
 
 
-&lt;div id=&#34;chart-426579381&#34; class=&#34;chart pb-3&#34; style=&#34;max-width: 100%; margin: auto;&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-731589264&#34; class=&#34;chart pb-3&#34; style=&#34;max-width: 100%; margin: auto;&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -115,7 +115,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-426579381&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-731589264&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -552,10 +552,56 @@ Three
     </item>
     
     <item>
-      <title>External Project</title>
-      <link>/project/external-project/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
-      <guid>/project/external-project/</guid>
+      <title>baby names</title>
+      <link>/project/baby-names/</link>
+      <pubDate>Sat, 21 Jul 2018 00:00:00 +0000</pubDate>
+      <guid>/project/baby-names/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;This site does not use cookies.
+User analytics are not performed.
+Email addresses provided are used solely to communicate - they are not sold but they may be seen by third parties in the communication process.&lt;/p&gt;
+&lt;h2 id=&#34;questions-or-concerns-email-contactegregiouswebsite&#34;&gt;Questions or concerns email: &lt;a href=&#34;mailto:contact@egregious.website&#34;&gt;contact@egregious.website&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Terms</title>
+      <link>/terms/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      <guid>/terms/</guid>
+      <description>&lt;p&gt;No content on the site includes financial, legal or medical advice. Participation on the site is voluntary and available to people aged eighteen years or more. Commenters are asked to treat people with fairness and respect. Management reserves the right to tell specific users they are no longer welcome to participate on the site. Future changes to the terms of use will be published on the Terms page of this site.&lt;/p&gt;
+&lt;h2 id=&#34;questions-or-concerns-email-contactegregiouswebsite&#34;&gt;Questions or concerns email: &lt;a href=&#34;mailto:contact@egregious.website&#34;&gt;contact@egregious.website&lt;/a&gt;&lt;/h2&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>animated mandala app</title>
+      <link>/project/mandala-app/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <guid>/project/mandala-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>my travel map app</title>
+      <link>/project/travel-map-app/</link>
+      <pubDate>Wed, 06 Dec 2017 00:00:00 +0000</pubDate>
+      <guid>/project/travel-map-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>color palette app</title>
+      <link>/project/image-palette-app/</link>
+      <pubDate>Tue, 06 Jun 2017 00:00:00 +0000</pubDate>
+      <guid>/project/image-palette-app/</guid>
       <description></description>
     </item>
     

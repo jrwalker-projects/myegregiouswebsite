@@ -31,7 +31,7 @@ design:
 {{< figure library="true" src="logo1.png" title="" >}}
 
 {{% alert success %}}
-Welcome to my egregious website! Posts, some projects, images and information about me..
+Welcome to my egregious website! Posts, projects, images and information about me..
 {{% /alert %}}
 
 {{% alert warning %}}
@@ -39,6 +39,6 @@ Warning: It's pretty egregious
 {{% /alert %}}
 
 {{% alert note %}}
-Informational note: Best podcast ever [Perhaps It's You](https://perhapsitsyou.wordpress.com/) - an unofficial Unsolved Mysteries rewatch podcast (NSFW) available on every worthwhile audio platform
+Informational note: Best podcast ever [Perhaps It's You](https://perhapsitsyou.wordpress.com/) - an unofficial Unsolved Mysteries re-watch podcast (NSFW) available on every worthwhile audio platform
 
 {{% /alert %}}

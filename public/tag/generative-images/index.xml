@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generative, Images | my.egregious.website</title>
+    <link>/tag/generative-images/</link>
+      <atom:link href="/tag/generative-images/index.xml" rel="self" type="application/rss+xml" />
+    <description>Generative, Images</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 09 May 2018 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png</url>
+      <title>Generative, Images</title>
+      <link>/tag/generative-images/</link>
+    </image>
+    
+    <item>
+      <title>animated mandala app</title>
+      <link>/project/mandala-app/</link>
+      <pubDate>Wed, 09 May 2018 00:00:00 +0000</pubDate>
+      <guid>/project/mandala-app/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

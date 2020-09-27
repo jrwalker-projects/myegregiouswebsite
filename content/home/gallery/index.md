@@ -17,14 +17,12 @@ subtitle = ""
 
 {{< figure library="true" src="Bangkok.jpg" title="Bangkok" >}}
 
-{{< figure library="true" src="KL.jpg" title="Kuala Lumpur" >}}
-
 {{< figure library="true" src="Seattle.jpg" title="Olympia Park" >}}
 
 ## Generative Images
 
-{{< figure library="true" src="abs12-1.png" title="Abstract" >}}
-
 {{< figure library="true" src="grid_art200629Viridis.jpeg" title="Windows" >}}
 
 {{< figure library="true" src="sunflower.jpg" title="Voronoi Spiral Sunflower" >}}
+
+{{< figure library="true" src="abs12-1.png" title="Abstract" >}}

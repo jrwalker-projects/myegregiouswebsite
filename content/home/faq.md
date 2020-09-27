@@ -18,17 +18,17 @@ subtitle: Answers to your most Frequently Asked Questions
 design:
   columns: "1"
   background:
-    image:
+    image: NUPurpleswatch1.png
     image_darken: 0.0
-    image_parallax: true
+    image_parallax: false
     image_position: center
     image_size: cover
-    text_color_light: false
+    text_color_light: true
   spacing:
     padding: ["20px", "0", "20px", "0"]
 ---
 
-- **No**, that could be pretty dangerous
-- If we're going with an infinite universes interpretation, then **Yes**
+- **No**, :boom: that could be pretty dangerous :fire:
+- If we're going with an infinite universes interpretation, then **Yes** :earth_americas: :octopus:
 - According to sources on set at the time, Murray improvised the line to cover the fact that the groundhog (which he was holding on his lap) was agitated and trying to escape by climbing over the steering wheel.
-- Hadn't realized that. ***Thank you*** for pointing it out.
+- Hadn't realized that. ***Thank you*** for pointing it out. :blush:
