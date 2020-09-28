@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R Programming | my.egregious.website</title>
+    <link>/tag/r-programming/</link>
+      <atom:link href="/tag/r-programming/index.xml" rel="self" type="application/rss+xml" />
+    <description>R Programming</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <image>
+      <url>/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png</url>
+      <title>R Programming</title>
+      <link>/tag/r-programming/</link>
+    </image>
+    
+    <item>
+      <title>animated gif map</title>
+      <link>/project/animated-gif-map/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/project/animated-gif-map/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
