@@ -5,7 +5,7 @@
     <link>/category/r/</link>
       <atom:link href="/category/r/index.xml" rel="self" type="application/rss+xml" />
     <description>R</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 23 Jul 2015 21:13:14 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 26 Jun 2020 21:13:14 -0500</lastBuildDate>
     <image>
       <url>/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png</url>
       <title>R</title>
@@ -13,51 +13,84 @@
     </image>
     
     <item>
-      <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
-      <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <title>Histerical Squares</title>
+      <link>/post/2020-06-26-histerical-squares/</link>
+      <pubDate>Fri, 26 Jun 2020 21:13:14 -0500</pubDate>
+      <guid>/post/2020-06-26-histerical-squares/</guid>
       <description>
 
 
-&lt;div id=&#34;r-markdown&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;R Markdown&lt;/h1&gt;
-&lt;p&gt;This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see &lt;a href=&#34;http://rmarkdown.rstudio.com&#34; class=&#34;uri&#34;&gt;http://rmarkdown.rstudio.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;You can embed an R code chunk like this:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit &amp;lt;- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;including-plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Including Plots&lt;/h1&gt;
-&lt;p&gt;You can also embed plots. See Figure &lt;a href=&#34;#fig:pie&#34;&gt;1&lt;/a&gt; for example:&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c(&amp;#39;Sky&amp;#39;, &amp;#39;Sunny side of pyramid&amp;#39;, &amp;#39;Shady side of pyramid&amp;#39;),
-  col = c(&amp;#39;#0292D8&amp;#39;, &amp;#39;#F7EA39&amp;#39;, &amp;#39;#C4B632&amp;#39;),
-  init.angle = -50, border = NA
-)&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;figure&#34;&gt;&lt;span id=&#34;fig:pie&#34;&gt;&lt;/span&gt;
-&lt;img src=&#34;/post/2015-07-23-r-rmarkdown_files/figure-html/pie-1.png&#34; alt=&#34;A fancy pie chart.&#34; width=&#34;672&#34; /&gt;
-&lt;p class=&#34;caption&#34;&gt;
-Figure 1: A fancy pie chart.
-&lt;/p&gt;
-&lt;/div&gt;
+&lt;div id=&#34;histerical-squares&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Histerical Squares&lt;/h1&gt;
+&lt;p&gt;Tweaking code provided by &lt;span class=&#34;citation&#34;&gt;@quantixed&lt;/span&gt; &lt;a href=&#34;https://quantixed.org/2019/05/26/turn-a-square-generative-art/&#34; class=&#34;uri&#34;&gt;https://quantixed.org/2019/05/26/turn-a-square-generative-art/&lt;/a&gt; This function will make grid art arguments define the number of squares in each dimension (xSize, ySize) grout defines the gap between squares (none = 0, max = 1) hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+## -- Attaching packages ------------------------------------------------------------------- tidyverse 1.3.0 --
+## v ggplot2 3.3.2     v purrr   0.3.4
+## v tibble  3.0.3     v dplyr   1.0.2
+## v tidyr   1.1.2     v stringr 1.4.0
+## v readr   1.3.1     v forcats 0.5.0
+## -- Conflicts ---------------------------------------------------------------------- tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+library(viridis)
+## Loading required package: viridisLite
+
+make_grid_art &amp;lt;- function(xSize, ySize, grout, hFactor) {
+  xWave &amp;lt;- seq.int(1:xSize)
+  yWave &amp;lt;- seq.int(1:ySize)
+  axMin &amp;lt;- min(min(xWave) - 1,min(yWave) - 1)
+  axMax &amp;lt;- max(max(xWave) + 1,max(yWave) + 1)
+  nSquares &amp;lt;- length(xWave) * length(yWave)
+  df &amp;lt;- data.frame()
+  x &amp;lt;- 0
+  halfGrout &amp;lt;- (1 - grout) / 2
+  id_fact = max(xSize,ySize)
+  for (i in seq_along(yWave)) {
+    yCentre &amp;lt;- yWave[i]
+    for (j in seq_along(xWave)) {
+      if(hFactor &amp;lt; 1) {
+        hyst &amp;lt;- rnorm(8, halfGrout, 0)
+      }
+      else {
+        hyst &amp;lt;- rnorm(8, halfGrout, sin(x / (nSquares - 1) * pi) / hFactor)
+      }
+      xCentre &amp;lt;- xWave[j]
+      id &amp;lt;- ((i-1)*id_fact) + j
+      edge_dist &amp;lt;- min(abs(i-1), abs(i-ySize),abs(j-1), abs(j-xSize))
+      fill &amp;lt;- mean(hyst)
+      lt &amp;lt;- c(xCentre - hyst[1],yCentre - hyst[2], id, fill, edge_dist)
+      rt &amp;lt;- c(xCentre + hyst[3],yCentre - hyst[4], id, fill, edge_dist)
+      rb &amp;lt;- c(xCentre + hyst[5],yCentre + hyst[6], id, fill, edge_dist)
+      lb &amp;lt;- c(xCentre - hyst[7],yCentre + hyst[8], id, fill, edge_dist)
+      df &amp;lt;- rbind(df, lt,rt,rb,lb)
+      x &amp;lt;- x + 1
+    }
+  }
+  names(df) &amp;lt;- c(&amp;quot;x&amp;quot;, &amp;quot;y&amp;quot;, &amp;quot;id&amp;quot;, &amp;quot;fill&amp;quot;, &amp;quot;dist&amp;quot;)  
+  p &amp;lt;- ggplot(df, aes(x=x, y=y, color=dist, fill=fill, group=id)) +
+    geom_polygon(alpha=0.75) +
+    scale_color_viridis(begin=0.35) +
+    scale_fill_viridis() +
+    theme_void() +
+    guides(color=FALSE, fill=FALSE)
+  print(p)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then to create each image..&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid with minimal hysteresis
+make_grid_art(10,10,0.2,50)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid (more squares) more hysteresis
+make_grid_art(20,20,0.02,10)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# rectangular grid same hysteresis
+make_grid_art(25,15,0,10)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# same grid with no hysteresis
+make_grid_art(25,15,0.08,0)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid moderate hysteresis and no grout
+make_grid_art(20,20,0,10)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
