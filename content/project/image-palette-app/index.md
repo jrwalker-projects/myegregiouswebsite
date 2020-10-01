@@ -6,7 +6,7 @@ image:
   focal_point: Smart
 summary: Shiny app uses k-means clustering to display a color palette from an uploaded image [links to external app]
 tags:
-- DataViz
+- DataVisualization
 - Images
 title: color palette app
 ---

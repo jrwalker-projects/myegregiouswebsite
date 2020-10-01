@@ -3,36 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/courses/example/example1/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/</loc>
-    <lastmod>2018-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/courses/example/example2/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/example/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/talk/</loc>
-    <lastmod>2030-06-01T13:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
     <lastmod>2020-06-26T21:13:14-05:00</lastmod>
   </url>
@@ -48,6 +18,11 @@
   </url>
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-06-26T21:13:14-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
     <lastmod>2020-06-26T21:13:14-05:00</lastmod>
   </url>
@@ -58,13 +33,13 @@
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/tag/r-programming/</loc>
     <lastmod>2020-06-26T21:13:14-05:00</lastmod>
   </url>
   
   <url>
-    <loc>/courses/</loc>
-    <lastmod>2019-05-05T00:00:00+01:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2020-06-26T21:13:14-05:00</lastmod>
   </url>
   
   <url>
@@ -73,23 +48,13 @@
   </url>
   
   <url>
-    <loc>/tag/dataviz/</loc>
+    <loc>/tag/datavisualization/</loc>
     <lastmod>2018-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/project/</loc>
     <lastmod>2018-07-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/privacy/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/terms/</loc>
-    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
   </url>
   
   <url>
@@ -126,6 +91,10 @@
   </url>
   
   <url>
+    <loc>/courses/</loc>
+  </url>
+  
+  <url>
     <loc>/author/john-walker/</loc>
   </url>
   
@@ -138,11 +107,7 @@
   </url>
   
   <url>
-    <loc>/tag/r-programming/</loc>
-  </url>
-  
-  <url>
-    <loc>/author/%E5%90%B3%E6%81%A9%E9%81%94/</loc>
+    <loc>/talk/</loc>
   </url>
   
 </urlset>

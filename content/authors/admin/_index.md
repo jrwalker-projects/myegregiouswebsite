@@ -36,7 +36,9 @@ superuser: true
 title: John Walker
 ---
 
-John Walker is a data analyst, student and volunteer. In a previous life in banking technology, performed systems integration, development & delivery project management and program management office (PMO) roles.
+John Walker is a data analyst, student and volunteer. Previous life in banking technology, performed systems integration, development & delivery project management and program management office (PMO) roles.
+
+Actively seeking assignments - Happy to consider pro bono work for non-profits
 
 Based over the years in Paris, London, Tokyo and Chicago - delivered projects in 12 countries
 

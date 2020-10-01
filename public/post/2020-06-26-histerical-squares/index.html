@@ -30,7 +30,7 @@
   
     
   
-  <meta name="description" content="Histerical SquaresTweaking code provided by @quantixed https://quantixed.org/2019/05/26/turn-a-square-generative-art/ This function will make grid art arguments define the number of squares in each dimension (xSize, ySize) grout defines the gap between squares (none = 0, max = 1) hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)">
+  <meta name="description" content="Histerical SquaresRotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is tweaking code provided by @quantixed in their post Turn A Square: generative aRt.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/2020-06-26-histerical-squares/">
@@ -271,7 +271,7 @@
   <meta property="og:site_name" content="my.egregious.website">
   <meta property="og:url" content="/post/2020-06-26-histerical-squares/">
   <meta property="og:title" content="Histerical Squares | my.egregious.website">
-  <meta property="og:description" content="Histerical SquaresTweaking code provided by @quantixed https://quantixed.org/2019/05/26/turn-a-square-generative-art/ This function will make grid art arguments define the number of squares in each dimension (xSize, ySize) grout defines the gap between squares (none = 0, max = 1) hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)"><meta property="og:image" content="/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png">
+  <meta property="og:description" content="Histerical SquaresRotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is tweaking code provided by @quantixed in their post Turn A Square: generative aRt."><meta property="og:image" content="/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png">
   <meta property="twitter:image" content="/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png"><meta property="og:locale" content="en-us">
   
     
@@ -321,7 +321,7 @@
       "url": "/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_192x192_fit_lanczos_2.png"
     }
   },
-  "description": "Histerical Squares\rTweaking code provided by @quantixed https://quantixed.org/2019/05/26/turn-a-square-generative-art/ This function will make grid art arguments define the number of squares in each dimension (xSize, ySize) grout defines the gap between squares (none = 0, max = 1) hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)"
+  "description": "Histerical Squares\rRotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is tweaking code provided by @quantixed in their post Turn A Square: generative aRt."
 }
 </script>
 
@@ -826,7 +826,13 @@
 
 <div id="histerical-squares" class="section level1">
 <h1>Histerical Squares</h1>
-<p>Tweaking code provided by <span class="citation">@quantixed</span> <a href="https://quantixed.org/2019/05/26/turn-a-square-generative-art/" class="uri">https://quantixed.org/2019/05/26/turn-a-square-generative-art/</a> This function will make grid art arguments define the number of squares in each dimension (xSize, ySize) grout defines the gap between squares (none = 0, max = 1) hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)</p>
+<p>Rotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is tweaking code provided by <span class="citation">@quantixed</span> in their post <a href="https://quantixed.org/2019/05/26/turn-a-square-generative-art/">Turn A Square: generative aRt</a>. The incremental change here is to organize the calculated hysteresis as rectangles instead of line segments so they can be filled with colors using the <a href="https://ggplot2.tidyverse.org/">ggplot2 library</a>. Using the <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html">viridis color palette</a> here - seemed to work nicely.</p>
+<p>This function will make grid art arguments define</p>
+<ul>
+<li>the number of squares in each dimension (xSize, ySize)</li>
+<li>grout defines the gap between squares (none = 0, max = 1)</li>
+<li>hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)</li>
+</ul>
 <pre class="r"><code>library(tidyverse)
 ## -- Attaching packages ------------------------------------------------------------------- tidyverse 1.3.0 --
 ## v ggplot2 3.3.2     v purrr   0.3.4
@@ -861,6 +867,7 @@ make_grid_art &lt;- function(xSize, ySize, grout, hFactor) {
       xCentre &lt;- xWave[j]
       id &lt;- ((i-1)*id_fact) + j
       edge_dist &lt;- min(abs(i-1), abs(i-ySize),abs(j-1), abs(j-xSize))
+      #using the mean of the tilt for edges as the color value
       fill &lt;- mean(hyst)
       lt &lt;- c(xCentre - hyst[1],yCentre - hyst[2], id, fill, edge_dist)
       rt &lt;- c(xCentre + hyst[3],yCentre - hyst[4], id, fill, edge_dist)
@@ -879,7 +886,7 @@ make_grid_art &lt;- function(xSize, ySize, grout, hFactor) {
     guides(color=FALSE, fill=FALSE)
   print(p)
 }</code></pre>
-<p>Then to create each image..</p>
+<p>Then to create some variations on the parameters</p>
 <pre class="r"><code># square grid with minimal hysteresis
 make_grid_art(10,10,0.2,50)</code></pre>
 <p><img src="/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
@@ -909,6 +916,8 @@ make_grid_art(20,20,0,10)</code></pre>
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tag/generative/">Generative</a>
+  
+  <a class="badge badge-light" href="/tag/r-programming/">R Programming</a>
   
 </div>
 
@@ -1165,6 +1174,8 @@ make_grid_art(20,20,0,10)</code></pre>
       
       <li><a href="/project/mandala-app/">animated mandala app</a></li>
       
+      <li><a href="/project/animated-gif-map/">animated gif map</a></li>
+      
     </ul>
   </div>
   
@@ -1293,16 +1304,6 @@ make_grid_art(20,20,0,10)</code></pre>
   
   <div class="container">
     <footer class="site-footer">
-  
-  <p class="powered-by">
-    
-      <a href="/privacy/">Privacy Policy</a>
-    
-    
-       &middot; 
-      <a href="/terms/">Terms</a>
-    
-  </p>
   
 
   <p class="powered-by">

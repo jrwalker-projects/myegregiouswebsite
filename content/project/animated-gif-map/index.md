@@ -6,7 +6,7 @@ image:
   focal_point: Smart
 summary: Coding travel locations into an animated gif of maps by year [links to external page]
 tags:
-- DataViz
+- DataVisualization
 - Travel
 - Images
 - R Programming

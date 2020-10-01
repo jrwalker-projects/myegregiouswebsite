@@ -6,6 +6,6 @@ image:
   focal_point: Smart
 summary: Data visualization of US baby name popularity [links to external page]
 tags:
-- DataViz
+- DataVisualization
 title: baby names
 ---

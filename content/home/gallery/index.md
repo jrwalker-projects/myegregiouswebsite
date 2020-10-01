@@ -21,7 +21,7 @@ subtitle = ""
 
 ## Generative Images
 
-{{< figure library="true" src="grid_art200629Viridis.jpeg" title="Windows" >}}
+{{< figure library="true" src="grid_art200629Viridis.jpeg" title="Histerical Squares" >}}
 
 {{< figure library="true" src="sunflower.jpg" title="Voronoi Spiral Sunflower" >}}
 
