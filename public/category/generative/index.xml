@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generative | my.egregious.website</title>
+    <link>/category/generative/</link>
+      <atom:link href="/category/generative/index.xml" rel="self" type="application/rss+xml" />
+    <description>Generative</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 03 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/logo_hua42834bdb1f7e874bc747a5cf5f43a55_563001_300x300_fit_lanczos_2.png</url>
+      <title>Generative</title>
+      <link>/category/generative/</link>
+    </image>
+    
+    <item>
+      <title>Abstractions</title>
+      <link>/post/2020-10-01-abstractions/</link>
+      <pubDate>Sat, 03 Oct 2020 00:00:00 +0000</pubDate>
+      <guid>/post/2020-10-01-abstractions/</guid>
+      <description>&lt;p&gt;Antonio Sánchez Chinchón aka 
+&lt;a href=&#34;https://fronkonstin.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fronkenstein&lt;/a&gt; is a favorite producer of generative images. Here&amp;rsquo;s he&amp;rsquo;s created code for images from work on mold pattern formation and efforts to simulate those patterns by 
+&lt;a href=&#34;https://sagejenson.com/physarum&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sage Jenson&lt;/a&gt; so it&amp;rsquo;s a use of cellular automata to describe actual cellular travel. Jenson&amp;rsquo;s post &amp;ldquo;talks about a generative system called Physarum model, which simulates the evolution of a colony of extremely simple organisms that, under certain environmental conditions, result into complex behaviors&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;From Jenson: &amp;ldquo;A simple 3-by-3 mean filter is applied to simulate diffusion of the particle trail, and then a multiplicative decay factor is applied to simulate trail dissipation over time. The diagram below describes the six sub-steps of a simulation tick:&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./diagram_800.jpg&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://fronkonstin.com/2020/08/11/abstractions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fronkenstein&amp;rsquo;s post&lt;/a&gt; provides several image examples running his code.&lt;/p&gt;
+&lt;p&gt;My images are completely derivative from the code created by Fronkenstein - still good fun as the images can vary from one to another quite a bit - i haven&amp;rsquo;t changed a line of code, which can be found 
+&lt;a href=&#34;https://github.com/aschinchon/abstractions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, just the run parameters to try different effects&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./abs12-1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./abs18b-1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./abs13-1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;./abs27-1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

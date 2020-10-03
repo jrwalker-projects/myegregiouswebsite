@@ -13,33 +13,34 @@
     </image>
     
     <item>
-      <title>Histerical Squares</title>
-      <link>/post/2020-06-26-histerical-squares/</link>
+      <title>Hysterical Squares</title>
+      <link>/post/2020-06-26-hysterical-squares/</link>
       <pubDate>Fri, 26 Jun 2020 21:13:14 -0500</pubDate>
-      <guid>/post/2020-06-26-histerical-squares/</guid>
+      <guid>/post/2020-06-26-hysterical-squares/</guid>
       <description>
 
 
-&lt;div id=&#34;histerical-squares&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Histerical Squares&lt;/h1&gt;
-&lt;p&gt;Rotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is tweaking code provided by &lt;span class=&#34;citation&#34;&gt;@quantixed&lt;/span&gt; in their post &lt;a href=&#34;https://quantixed.org/2019/05/26/turn-a-square-generative-art/&#34;&gt;Turn A Square: generative aRt&lt;/a&gt;. The incremental change here is to organize the calculated hysteresis as rectangles instead of line segments so they can be filled with colors using the &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;ggplot2 library&lt;/a&gt;. Using the &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34;&gt;viridis color palette&lt;/a&gt; here - seemed to work nicely.&lt;/p&gt;
-&lt;p&gt;This function will make grid art arguments define&lt;/p&gt;
+&lt;p&gt;Rotation of rectangles in a grid using a general pattern for simulated hysteresis. This almost entirely derivative effort is a tweak code provided by &lt;span class=&#34;citation&#34;&gt;@quantixed&lt;/span&gt; in their post &lt;a href=&#34;https://quantixed.org/2019/05/26/turn-a-square-generative-art/&#34;&gt;Turn A Square: generative aRt&lt;/a&gt;. The incremental change here is to organize the calculated hysteresis as rectangles of line segments so they can be filled with colors using the &lt;a href=&#34;https://ggplot2.tidyverse.org/&#34;&gt;ggplot2 library&lt;/a&gt;. Chose the &lt;a href=&#34;https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html&#34;&gt;viridis color palette&lt;/a&gt; here, it seemed to work nicely.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+library(viridis)
+## Loading required package: viridisLite&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Fill colors are based on the average shift in segments of a rectangle so the more twisted away from the grid the more the fill color will change.&lt;/p&gt;
+&lt;p&gt;The make_grid_art function will make grid art arguments define&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;the number of squares in each dimension (xSize, ySize)&lt;/li&gt;
 &lt;li&gt;grout defines the gap between squares (none = 0, max = 1)&lt;/li&gt;
-&lt;li&gt;hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10)&lt;/li&gt;
+&lt;li&gt;hFactor defines the amount of hysteresis (none = 0, max = 1, moderate = 10) For values above 1, larger values actually mean less shift&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
 ## -- Attaching packages ------------------------------------------------------------------- tidyverse 1.3.0 --
-## v ggplot2 3.3.2     v purrr   0.3.4
 ## v tibble  3.0.3     v dplyr   1.0.2
 ## v tidyr   1.1.2     v stringr 1.4.0
 ## v readr   1.3.1     v forcats 0.5.0
+## v purrr   0.3.4
 ## -- Conflicts ---------------------------------------------------------------------- tidyverse_conflicts() --
 ## x dplyr::filter() masks stats::filter()
 ## x dplyr::lag()    masks stats::lag()
 library(viridis)
-## Loading required package: viridisLite
 
 make_grid_art &amp;lt;- function(xSize, ySize, grout, hFactor) {
   xWave &amp;lt;- seq.int(1:xSize)
@@ -58,13 +59,14 @@ make_grid_art &amp;lt;- function(xSize, ySize, grout, hFactor) {
         hyst &amp;lt;- rnorm(8, halfGrout, 0)
       }
       else {
+        #shift for each line segment drawn standard distribution
         hyst &amp;lt;- rnorm(8, halfGrout, sin(x / (nSquares - 1) * pi) / hFactor)
       }
       xCentre &amp;lt;- xWave[j]
-      id &amp;lt;- ((i-1)*id_fact) + j
+      id &amp;lt;- ((i-1)*id_fact) + j #id groups the segments for each rectangle
       edge_dist &amp;lt;- min(abs(i-1), abs(i-ySize),abs(j-1), abs(j-xSize))
       #using the mean of the tilt for edges as the color value
-      fill &amp;lt;- mean(hyst)
+      fill &amp;lt;- mean(hyst) #fill color is the mean of hysteresis shift for segments
       lt &amp;lt;- c(xCentre - hyst[1],yCentre - hyst[2], id, fill, edge_dist)
       rt &amp;lt;- c(xCentre + hyst[3],yCentre - hyst[4], id, fill, edge_dist)
       rb &amp;lt;- c(xCentre + hyst[5],yCentre + hyst[6], id, fill, edge_dist)
@@ -85,20 +87,19 @@ make_grid_art &amp;lt;- function(xSize, ySize, grout, hFactor) {
 &lt;p&gt;Then to create some variations on the parameters&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid with minimal hysteresis
 make_grid_art(10,10,0.2,50)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-hysterical-squares_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid (more squares) more hysteresis
 make_grid_art(20,20,0.02,10)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-hysterical-squares_files/figure-html/unnamed-chunk-3-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# rectangular grid same hysteresis
 make_grid_art(25,15,0,10)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-hysterical-squares_files/figure-html/unnamed-chunk-3-3.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# same grid with no hysteresis
 make_grid_art(25,15,0.08,0)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-hysterical-squares_files/figure-html/unnamed-chunk-3-4.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# square grid moderate hysteresis and no grout
 make_grid_art(20,20,0,10)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-histerical-squares_files/figure-html/unnamed-chunk-2-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-06-26-hysterical-squares_files/figure-html/unnamed-chunk-3-5.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
